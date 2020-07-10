@@ -35,6 +35,7 @@ Things you may want to cover:
 - has_many :groups, through: :groups_users
 - has_many :messages
 - has_many :group_users
+//has_many :groups, through: :groups_usersで中間テーブルを経由
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -55,6 +56,7 @@ Things you may want to cover:
 - has_many :users, through: :groups_users
 - has_many :messages
 - has_many :group_users
+//has_many :users, through: :groups_usersで中間テーブルを経由
 
 ## groups_usersテーブル
 |Column|Type|Options|
