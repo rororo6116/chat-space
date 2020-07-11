@@ -5,7 +5,9 @@
       %ul.chat__rightheader__memberList
         %li.chat__rightheader__member Member : 
         %li.chat__rightheader__membername rororo6116
-    %a.chat__rightheader__editbutton Edit
+    = link_to "#", class: "editbutton" do
+      edit
+    //%a.chat__rightheader__editbutton Edit
   
   .chat__messagefield
     .chat__messagefield__messagebox

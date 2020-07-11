@@ -100,8 +100,8 @@
       }
     }
   }
-  
-  .chat__rightheader__editbutton {
+  .editbutton {
+  //.chat__rightheader__editbutton {
     display: block;
     border: 1px solid #38AEF0;
     color: #38AEF0;
@@ -180,5 +180,5 @@
         color: white;
       }
     }
-  }  
-}    
+  }
+}
