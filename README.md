@@ -66,3 +66,7 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+# フロント画像
+
+<img width="1785" alt="430548a3ff939d40b5e10148a29d4269" src="https://user-images.githubusercontent.com/67730397/87219661-0f751c80-c398-11ea-9ac8-215af43e241b.png">
