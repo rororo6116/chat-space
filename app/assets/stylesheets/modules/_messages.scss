@@ -58,15 +58,18 @@
   color: #fff;
   width: 300px;
     .sidebar__group {
-    color: #fff;
     text-decoration: none;
     cursor: pointer;
     font-size: 15px;
     padding: 20px 0 40px;
     box-sizing: border-box;
+      .groupcolor {
+      color: white;
+      text-decoration: none;
+      }
       &__message {
       font-size: 11px;
-      margin-top: 5px;
+      margin-top: 5px; 
       }
     }
   }
