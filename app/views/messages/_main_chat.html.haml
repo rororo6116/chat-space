@@ -1,27 +1,22 @@
 .chat
-  .chat__rightheader
-    .chat__rightheader__group
-      .chat__rightheader__groupname rororo6116
-      %ul.chat__rightheader__memberList
-        %li.chat__rightheader__member Member : 
-        %li.chat__rightheader__membername rororo6116
-    = link_to "#", class: "editbutton" do
+  .header
+    .header__group
+      %h2.header__group__name= @group.name
+      %ul.header__group__memberlist
+        Member :
+        - @group.users.each do |user|
+          = user.name
+          %li.header__group__memberlist__mamber= user.name
+    = link_to edit_group_path(@group.id), class: "editbutton" do
       edit
-    //%a.chat__rightheader__editbutton Edit
-  
   .chat__messagefield
-    .chat__messagefield__messagebox
-      .chat__messagefield__messageinfo
-        .chat__messagefield__messageinfo__username rororo6116
-        .chat__Mmessagefield__messageinfo__date 2020年07月09日 21時20分
-      .chat__messagefield__message
-        %p.chat__messagefield__message__content ro
+    = render @messages
 
-  .form
-    %form.new_massage
+  .footer
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "send"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'SEND', class: 'send'

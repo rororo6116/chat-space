@@ -78,33 +78,33 @@
 .chat {
   width: calc(100vw - 300px);
   box-sizing: border-box;
-  display: block;
+  
   color: #000;
   background: #FFF;
-
-  &__rightheader {
-  height: 100px;
-  padding: 0 40px;
-  border-bottom: solid 1px #eee;
-  display: flex;
-  justify-content: space-between;
-  &__group {
-    color: #333;
-    font-size: 20px;
-    margin-top: 35px;
-    .chat__rightheader__memberList {
-      color: #999;
-      font-size: 12px;
-      margin-top: 15px;
-      display: flex;
-        .chat__rightheader__membername {
-        padding-left: 5px;
-        }
+  .header {
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    display: flex;
+    justify-content: space-between;
+    &__group {
+      display: block;
+      // justify-content: space-between;
+      &__name {
+        color: #333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+        &__memberlist {
+          color: #999;
+          font-size: 12px;
+          margin-top: 15px;
+          display: flex;
+          margin-right: 5px;
       }
     }
   }
   .editbutton {
-  //.chat__rightheader__editbutton {
     display: block;
     border: 1px solid #38AEF0;
     color: #38AEF0;
@@ -113,7 +113,7 @@
     margin-top: 28px;
     padding: 0 20px;
     text-decoration: none;
-    }
+}
   
   
   .chat__messagefield {
@@ -143,24 +143,24 @@
     margin-top: 12px;
   }
   
-  .form {
-    height: 70px;
+  .footer {
+    height: 90px;
     background-color: #dddddd;
-    padding: 20px 50px 0 40px;
-  
-    form {
+    width: calc(100vw-300px);
+    box-sizing: border-box;
+    padding: 20px 50px 20px 40px;
+    .form {
       display: flex;
-  
       .input-box {
-        display: flex;
         width: 100%;
         position: relative;
+        display: flex;
         &__text {
           height: 50px;
           width: 100%;
           color: #434a54;
           border-style: none;
-          padding: 0 40px 0 10px;
+          padding: 0 40px 0 15px;
         }
         &__image {
           position: absolute;
@@ -168,16 +168,15 @@
           right: 10px;
           cursor: pointer;
           font-size: 1.3rem;
-
-          &__file {
-            display: none;
-          }
+        &__file {
+          display: none;
         }
       }
-      .send {
+    }
+        .send {
         width: 100px;
         height: 50px;
-        padding: 0 30px;
+        padding: 0 20px;
         margin-left: 15px;
         background-color: #38aef0;
         color: white;
