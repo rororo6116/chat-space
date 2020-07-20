@@ -54,7 +54,6 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      
       $('.chat__messagefield').append(html);      
       $('form')[0].reset();
       $('.send').prop('disabled', false);
